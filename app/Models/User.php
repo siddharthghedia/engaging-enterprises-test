@@ -46,4 +46,9 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(Product::class, 'user_products');
     }
+
+    public function activeProducts()
+    {
+        return $this->belongsToMany(Product::class, 'user_products')->where('products.is_active', '=', 1)->withPivot('quantity');
+    }
 }
