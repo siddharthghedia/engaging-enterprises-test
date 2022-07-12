@@ -80,6 +80,15 @@
                     </div>
                 </div>
             </div>
+            <div class="col-3">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">The exchange rates for USD and RON based on Euro</h5>
+                        <h4>USD: {{ $conversionData['rates']['USD'] }}</h4>
+                        <h4>RON: {{ $conversionData['rates']['RON'] }}</h4>
+                    </div>
+                </div>
+            </div>
         </div>
     </body>
 </html>
