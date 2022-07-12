@@ -20,7 +20,7 @@ class UserProductsTableSeeder extends Seeder
         foreach($users as $user)
         {
             $product = Product::inRandomOrder()->first();
-            $user->products()->attach($product->id);
+            $user->products()->attach($product->id, ['quantity' => rand('1', '50')]);
         }
     }
 }
